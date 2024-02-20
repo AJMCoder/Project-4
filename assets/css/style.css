@@ -5,7 +5,7 @@
 .landing-container {
     height: 100vh;
 
-    background: url(../images/tennis-player.jpg) no-repeat bottom right fixed; 
+    background: url(../images/tennis-player.jpg) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -20,9 +20,10 @@
 
 .header-text {
     color: white;
+    font-size: calc(15px + 5vw);
     font-weight: bold;
-    font-size: 3rem;
     text-align: center;
+    text-shadow: 2px 2px 4px #000000;
 }
 
 .join-container {
