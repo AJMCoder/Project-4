@@ -61,6 +61,8 @@ Welcome...
 
 - When creating a modal for the Login button, now popup was being shown. Re-reading the code line by line of the modal and the Login section made me realise that the data-bs-target was not correctly aligned with what it was trying to pull from and was resulting in no popup. Renaming it to match the modal code section finally allowed the modal to appear. 
 - Upon creating a custom CSS file, I noticed that any styles that were being added, we not affecting the site. I re-wrote the link to the css file, ensuring it was correct but that didn't result in a fix. Browsing the internet for answers, I came across a comment that showed the order of which the CSS custom file and Bootstraps CSS file should be written in. I moved the custome CSS file below Bootstraps and it fixed the issue, allowing me to use custom CSS styles alongside.
+- When resizing my screen to test compatiblity i noticed that the Navbar was not reacting accordingly and when at medium-small sizes, part of the end of it was missing from the screen. I tried adjusting the Bootstrap CSS but it didn't work. I went back through the Boostrap website guides for Navbars and realised I had incorrectly insert the container class and not made it fluid. Once added, the Navbar responded to the change in screen size and reacted how it was intended.
+- 
 
 
 ## Remaining Bugs:
@@ -69,18 +71,10 @@ Welcome...
 
 # Deployment:
 
-This project was deployed using Code Institute's mock terminal for Heroku.
 
-Steps for deployment:
-
-- Clone this repository.
-- Create a new Heroku app.
-- In the settings, within the 'Config Vars', add the KEY/Value pairs: PORT. Set this to 8000.
-- Set the buildbacks to Python and NodeJs in that order.
-- Link the Heroku app to the repository.
-- Click Deploy.
 
 # Credits
 
-- Inspiration taken from [Dr. Codie](https://drcodie.com/battleships-game-in-python/).
+- Inspiration taken from [Net Ninja](https://www.youtube.com/watch?v=yCCIztB-S_k&list=PL4cUxeGkcC9joIM91nLzd_qaH_AimmdAR&index=8).
+- Responsive Font Size formula adapted from [Matthew James Taylor](https://matthewjamestaylor.com/  responsive-font-size#:~:text=To%20make%20font%20size%20responsive%20in%20steps%2C%20set%20the%20base,relative%20to%20the%20screen%20width.).
 - Resources used from [Codecademy](https://www.codecademy.com/resources/docs/swift/arrays), and Mimo Coding App.
