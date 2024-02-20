@@ -15,9 +15,18 @@
     justify-content: center;
     align-items: center;
 
+    position: relative;
+}
+
+.header-text {
+    color: white;
+    font-weight: bold;
+    font-size: 3rem;
+    text-align: center;
 }
 
 .join-container {
     height : 25vh;
     background-color: antiquewhite;
 }
+
