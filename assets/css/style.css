@@ -31,3 +31,17 @@
     background-color: antiquewhite;
 }
 
+.community-container {
+    height : 25vh;
+    background-color: lightblue;
+}
+
+.testimonials-container {
+    height : 25vh;
+    background-color: lightgreen;
+}
+
+.about-container {
+    height : 25vh;
+    background-color: lightcoral;
+}
