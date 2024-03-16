@@ -5,7 +5,7 @@
 .landing-container {
     height: 100vh;
 
-    background: url(../images/tennis-player.jpg) no-repeat center center fixed; 
+    background: url(../images/tennis-player.jpg) no-repeat top center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
