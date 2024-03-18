@@ -1,7 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600;800&family=Oswald:wght@300&display=swap');
 /* FILEPATH: /C:/Users/Alex Mullins/Documents/Coding/Project 4/Project-4/assets/css/style.css */
 
 /* Container styles */
 
+/*--------------------------------General Styling*/
+h2 {
+    font-family: "klee One", sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: calc(10px + 2vw);
+}
+
+h3 {
+    font-family: "klee One", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: calc(10px + 1vw);
+}
+
+/*--------------------------------Landing Page*/
 .landing-container {
     height: 100vh;
 
@@ -18,6 +35,7 @@
     position: relative;
 }
 
+/*--------------------------------Header*/
 .header-text {
     color: white;
     font-size: calc(15px + 5vw);
@@ -26,14 +44,15 @@
     text-shadow: 2px 2px 4px #000000;
 }
 
+/*--------------------------------Content Styling*/
 .join-container {
     background-color: antiquewhite;
-    font-size: calc(15px + 0.5vw);
+    font-size: calc(10px + 0.5vw);
 }
 
 .community-container {
     background-color: lightblue;
-    font-size: calc(15px + 0.5vw);
+    font-size: calc(10px + 0.5vw);
 }
 
 .testimonials-container {
