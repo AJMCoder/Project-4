@@ -46,21 +46,25 @@ h3 {
 
 /*--------------------------------Content Styling*/
 .join-container {
+    font-family: "Klee One", sans-serif;
     background-color: antiquewhite;
     font-size: calc(10px + 0.5vw);
 }
 
 .community-container {
+    font-family: "Klee One", sans-serif;
     background-color: lightblue;
     font-size: calc(10px + 0.5vw);
 }
 
 .testimonials-container {
+    font-family: "Klee One", sans-serif;
     background-color: lightgreen;
     font-size: calc(10px + 0.5vw);
 }
 
 .about-container {
+    font-family: "Klee One", sans-serif;
     background-color: lightcoral;
     font-size: calc(10px + 0.5vw);
 }
@@ -83,6 +87,7 @@ h3 {
     padding-top: 10px;
 }
 
+/* Design ideas insired by the Resume project guide */
 .social-buttons li a i {
     width: 34px;
     height: 32px;
@@ -102,3 +107,5 @@ h3 {
 .social-buttons li a i:hover {
     background-color: rgb(87, 175, 99);
 }
+
+/*--------------------------------Media Queries*/
