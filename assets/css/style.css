@@ -77,11 +77,28 @@ h3 {
 
 .footer-contact p {
     color: rgb(87, 175, 99);
-    padding-top: 10px;
+    font-size: larger;
 }
 .social-buttons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     padding-top: 10px;
+}
+
+.social-buttons li a i {
+    width: 34px;
+    height: 32px;
+    padding: 12px 0;
+    border-radius: 50%;
+    font-size: 18px;
+    line-height: 7px;
+    text-align: center;
+    color: #ffffff;
+    background-color: rgb(150, 150, 150);
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+}
+
+.social-buttons li a i:hover {
+    background-color: rgb(87, 175, 99);
 }
