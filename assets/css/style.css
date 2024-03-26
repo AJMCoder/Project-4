@@ -108,4 +108,18 @@ h3 {
     background-color: rgb(87, 175, 99);
 }
 
+/*--------------------------------Rules Page*/
+.rules-page {
+    padding-top: 60px;
+    padding-bottom: 20px;
+    font-family: "Klee One", sans-serif;
+    background-color: rgb(137, 198, 68);
+    font-size: calc(10px + 0.5vw);
+}
+
+.rules-page h1 {
+    font-size: calc(10px + 2vw);
+    font-weight: bold;
+    
+}
 /*--------------------------------Media Queries*/
