@@ -133,7 +133,6 @@ h3 {
 
 /*--------------------------------Events Page*/
 .events-container {
-    
     padding-top: 60px;
     padding-bottom: 20px;
     padding-left: 20px;
@@ -141,5 +140,20 @@ h3 {
     font-family: "Klee One", sans-serif;
     background-color: rgb(137, 198, 68);
     font-size: calc(10px + 0.5vw);
+}
+
+/*--------------------------------Contact Page*/
+.contact-container {
+    padding-top: 60px;
+    padding-bottom: 20px;
+    font-family: "Klee One", sans-serif;
+    background-color: rgb(182, 188, 156);
+    font-size: calc(10px + 0.5vw);
+}
+
+.form-group {
+    padding: 10px;
+    margin: 0 auto;
+    max-width: 70%;
 }
 /*--------------------------------Media Queries*/
