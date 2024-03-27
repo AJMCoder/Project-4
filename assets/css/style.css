@@ -4,6 +4,11 @@
 /* Container styles */
 
 /*--------------------------------General Styling*/
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 h2 {
     font-family: "klee One", sans-serif;
     font-style: normal;
@@ -71,6 +76,9 @@ h3 {
 
 /*--------------------------------Footer*/
 .footer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     font-family: "Oswald", sans-serif;
     background-color: rgb(32, 31, 31);
     color: white;
