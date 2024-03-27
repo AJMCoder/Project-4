@@ -7,7 +7,7 @@
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: calc(100vh - 59 - 189px);
 }
 h2 {
     font-family: "klee One", sans-serif;
@@ -129,5 +129,17 @@ h3 {
     font-size: calc(10px + 2vw);
     font-weight: bold;
     
+}
+
+/*--------------------------------Events Page*/
+.events-container {
+    
+    padding-top: 60px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: "Klee One", sans-serif;
+    background-color: rgb(137, 198, 68);
+    font-size: calc(10px + 0.5vw);
 }
 /*--------------------------------Media Queries*/

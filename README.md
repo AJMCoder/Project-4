@@ -68,7 +68,7 @@ Welcome...
 
 ## Remaining Bugs:
 
-- No remaining bugs.
+- FOOTER WILL NOT REMAIN A THE BOTTOM OF THE PAGE.
 
 # Deployment:
 
