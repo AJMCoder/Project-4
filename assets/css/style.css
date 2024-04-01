@@ -133,6 +133,9 @@ h3 {
 
 /*--------------------------------Events Page*/
 .events-container {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
     padding-top: 60px;
     padding-bottom: 20px;
     padding-left: 20px;
