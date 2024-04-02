@@ -131,6 +131,14 @@ h3 {
     
 }
 
+/*--------------------------------Leagues Page*/
+.leagues-container {
+    padding-top: 90px;
+    padding-bottom: 20px;
+    font-family: "Klee One", sans-serif;
+    background-color: rgb(182, 188, 156);
+    font-size: calc(10px + 0.5vw);
+}
 /*--------------------------------Events Page*/
 .events-container {
     display: flex;
