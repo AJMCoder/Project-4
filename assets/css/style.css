@@ -7,8 +7,14 @@
 body {
     display: flex;
     flex-direction: column;
-    min-height: calc(100vh - 59 - 189px);
+    min-height: 100vh;
 }
+
+main {
+    height: -webkit-fill-available;
+    flex: 1 1 auto;
+}
+
 h2 {
     font-family: "klee One", sans-serif;
     font-style: normal;
@@ -95,6 +101,11 @@ h3 {
     padding-top: 10px;
 }
 
+.form-control {
+    margin: 0 auto;
+    max-width: 50%;
+}
+
 /* Design ideas insired by the Resume project guide */
 .social-buttons li a i {
     width: 34px;
@@ -142,7 +153,7 @@ h3 {
 /*--------------------------------Events Page*/
 .events-container {
     display: flex;
-    min-height: 100vh;
+    height: 100%;
     flex-direction: column;
     padding-top: 60px;
     padding-bottom: 20px;
@@ -168,3 +179,8 @@ h3 {
     max-width: 70%;
 }
 /*--------------------------------Media Queries*/
+@media screen and (max-width: 992px) {
+    .form-control {
+        max-width: 75%;
+    }
+}
