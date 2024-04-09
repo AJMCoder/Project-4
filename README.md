@@ -63,8 +63,8 @@ Welcome...
 - Upon creating a custom CSS file, I noticed that any styles that were being added, we not affecting the site. I re-wrote the link to the css file, ensuring it was correct but that didn't result in a fix. Browsing the internet for answers, I came across a comment that showed the order of which the CSS custom file and Bootstraps CSS file should be written in. I moved the custome CSS file below Bootstraps and it fixed the issue, allowing me to use custom CSS styles alongside.
 - When resizing my screen to test compatiblity i noticed that the Navbar was not reacting accordingly and when at medium-small sizes, part of the end of it was missing from the screen. I tried adjusting the Bootstrap CSS but it didn't work. I went back through the Boostrap website guides for Navbars and realised I had incorrectly insert the container class and not made it fluid. Once added, the Navbar responded to the change in screen size and reacted how it was intended.
 - When at full screen, the landing page image was not displaying correctly and was positioned so that the head of the player was missing from the screen. Upon reading through my code, I saw that the styling for the image was set to 'Center', and tried re-styling the image to be at the 'Bottom'. This fixed the issue and remained perfectly scaled for smaller devices also.
-- 
-
+- When installing the Django files, I was met with numerous error messages stating my commands not being recognised within the terminal. With the assistance of a mentor i was able to rectify this problem by by selected a new default terminal 'command prompt'.
+- During the Django installation I was met with another issue whereby my 'events' folder was not being recognised why trying to run a server and thus was resulting in a failed load. Running through my code i could see that URLPatterns path for the folder was writen okay, but i had forgotten to include the '*from events import views as events_views*'
 
 ## Remaining Bugs:
 
