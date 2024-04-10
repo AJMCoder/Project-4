@@ -1,0 +1,9 @@
+core.Microsoft*
+core.mongo*
+core.python*
+env.py
+.github/
+cloundinary_python.txt
+_pycache_/
+node_modules/
+*.py[cod]
