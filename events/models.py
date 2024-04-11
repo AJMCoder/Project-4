@@ -15,6 +15,8 @@ class Events(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=[(0, 'Draft'), (1, 'Published')], default=0)
+    excerpt = models.TextField(blank=True)
+    updated_on = models.DateTimeField(auto_now=True)
 
     def __str__(self):
         return self.title
