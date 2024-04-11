@@ -30,8 +30,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['https://city-serve-f48d9e79e0a9.herokuapp.com/',
-                 '.herokuapp.com',]
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'https://city-serve-f48d9e79e0a9.herokuapp.com/', '.herokuapp.com']
 
 
 # Application definition
@@ -90,6 +89,11 @@ WSGI_APPLICATION = 'city_serve.wsgi.application'
 DATABASES = {
     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://*.gitpod.io/",
+    "https://*.herokuapp.com"
+]
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
