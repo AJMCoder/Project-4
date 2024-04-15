@@ -7,3 +7,4 @@ cloundinary_python.txt
 _pycache_/
 node_modules/
 *.py[cod]
+events/fixtures/
