@@ -21,7 +21,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="manifest" href="{% url 'site.webmanifest' %}">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
 
@@ -43,7 +43,7 @@
     <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
         <div class="container-fluid">
             <a href="{% url 'home' %}" class="navbar-brand toplogo nav-link {% if request.path == home_url %}active{%endif%}" aria-current="page">
-                <img src="./assets/images/cityserve-logo.png" alt="logo" width="30" height="30
+                <img src="{% static 'images/cityserve-logo.png' %}"" alt="logo" width="30" height="30
                 " class="d-inline-block align-text-top">
                 <span class="fw-bold text-secondary">
                     CityServe Tennis League
