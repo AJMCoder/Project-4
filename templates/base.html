@@ -1,13 +1,22 @@
+{% url 'home' as home_url %}
+{% load static %}
+
 <!DOCTYPE html>
-<html lang="en">
+<html class="h-100" lang="en">
+
 <!-- This is the header file for the AJM Tennis League website. It contains the title, meta tags, Bootstrap link and link to the CSS file. -->
+
 <head>
+    <!-- Title -->
+    <title>CityServe Tennis League</title>
+
     <!-- Meta Tags for search engines -->
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="description"
         content="tennis league, tennis competition, tennis challenge">
     <meta name="keywords"
         content="tennis, adult tennis, tennis league, tennis competition, challenge, cheshire, shropshire, staffordshire, sport, exercise, fun,">
+
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
@@ -15,17 +24,21 @@
     <link rel="manifest" href="/site.webmanifest">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
+
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
     <!-- CSS -->
-    <link rel="stylesheet" href="./assets/css/style.css" type="text/css" />
+    <link rel="stylesheet" href="/static/css/styles.css" type="text/css" />
+
     <!-- Jquery -->
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-    <!-- Title -->
-    <title>CityServe Tennis League</title>
+
 </head>
+
 <!-- This is the body of the CityServe League website. It contains the navigation bar, main content and footer. -->
-<body>
+<body class="d-flex flex-column h-100 main-bg">
+
 <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
         <div class="container-fluid">
@@ -76,100 +89,13 @@
         </div>
     </nav>
     <!-- Main Content -->
-    <main>
-        <!-- Landing Section -->
-        <section id="tennis-player">
-        <div class="container-fluid landing-container" id="cover-text">
-            <h1 class="header-text">SOCIABLE, COMPETITIVE TENNIS ON A COURT NEAR YOU</h1>
-        </div>
-        </section>
-        <!-- Inspiration for Website design used from Net Ninja -->
-        <!-- How to join section -->
-        <section id="how-to-join">
-            <div class="join-container container-lg text-center my-5">
-                <h2>HOW TO JOIN</h2>
-                <div class="row">
-                    <div class="col-md-4">
-                        <h3>STEP 1</h3>
-                        <hr>
-                        <p>Register your interest by completing the form on the <a href="contact.html">contact</a> page.</p>
-                    </div>
-                    <div class="col-md-4">
-                        <h3>STEP 2</h3>
-                        <hr>
-                        <p>Choose which division you think you'd fit into, depending on your experience.</p>
-                    </div>
-                    <div class="col-md-4">
-                        <h3>STEP 3</h3>
-                        <hr>
-                        <p>Once we have enough players in your area, we will contact you to arrange a meeting to discuss the league.</p>  
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <section id="why-us">
-            <div class="community-container container-lg text-center my-5">
-              <div class="text-center">
-                <h2>WHY JOIN US?</h2>
-                <div class="row">
-                    <div class="col-md-4">
-                        <h3>COMPETITIVE TENNIS</h3>
-                        <hr>
-                        <p>Play against other players of a similar standard in a competitive league.</p>
-                    </div>
-                    <div class="col-md-4">
-                        <h3>MEET NEW PEOPLE</h3>
-                        <hr>
-                        <p>Meet new people and make new friends in your local area.</p>
-                    </div>
-                    <div class="col-md-4">
-                        <h3>STAY ACTIVE</h3>
-                        <hr>
-                        <p>Keep fit and active by playing tennis regularly.</p>  
-                    </div>
-                </div>
-              </div>  
-            </div>
-        </section>
+    <main class="flex-shrink-0 main-bg">
 
-        <section id="joining" class="bg-light mt-5">
-          <div class="container-lg text-center">
-            <h2>How to join</h2>
-          </div>
-        </section>
+    {% block content %}
+    {% endblock %}
 
-        <section id="testimonials">
-            <div class="testimonials-container container-lg text-center my-5">
-                <h2>TESTIMONIALS</h2>
-                <div class="row">
-                    <div class="col-md-4">
-                        <h3>JOHN SMITH</h3>
-                        <hr>
-                        <p>"I've been playing in the league for 3 years now and I've made some great friends. It's a great way to keep fit and active."</p>
-                    </div>
-                    <div class="col-md-4">
-                        <h3>JANE DOE</h3>
-                        <hr>
-                        <p>"I've been playing in the league for 3 years now and I've made some great friends. It's a great way to keep fit and active."</p>
-                    </div>
-                    <div class="col-md-4">
-                        <h3>DAVID JONES</h3>
-                        <hr>
-                        <p>"I've been playing in the league for 3 years now and I've made some great friends. It's a great way to keep fit and active."</p>  
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="about-us">
-            <div class="about-container container-lg text-center my-5">
-                <h2>ABOUT US</h2>
-                <p>CityServe Tennis holds a paramount significance within our local community, acting as the vibrant heartbeat of our shared passion for tennis. This league not only fosters a sense of camaraderie and friendly competition among tennis enthusiasts but also serves as a catalyst for a healthier and more active lifestyle. Beyond the exhilarating matches on the court, CityServe Tennis has become a melting pot for building lasting friendships and connections. By bringing individuals together through the shared love of tennis, this league not only promotes physical well-being but also contributes to the social fabric of our community. It provides a platform for players of all skill levels to engage, learn, and grow, making CityServe Tennis an indispensable part of our local sports culture.</p>
-                <p>CityServe Tennis League is a friendly, competitive tennis league for adults. We have leagues in Cheshire, Shropshire and Staffordshire. We are always looking for new players to join our leagues. If you are interested in joining, please register your interest on the <a href="contact.html">contact</a> page.</p>
-            </div>
-        </section>
     </main>
+
     <!-- Footer -->
     <footer class="footer-container container-fluid text-center">
         <div class="row">
@@ -274,7 +200,6 @@
       </div>
     <!-- JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <script src="./assets/js/searchBar.js"></script>
     <!-- Font Awesome Kit -->
     <script src="https://kit.fontawesome.com/7cdc731277.js" crossorigin="anonymous"></script>
 </body>
