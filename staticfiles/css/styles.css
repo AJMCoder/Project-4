@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600;800&family=Oswald:wght@300&display=swap');
+/* FILEPATH: /C:/Users/Alex Mullins/Documents/Coding/Project 4/Project-4/static/css/style.css */
+
+/* Container styles */
+
+/*--------------------------------General Styling*/
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    height: -webkit-fill-available;
+    flex: 1 1 auto;
+}
+
+h2 {
+    font-family: "klee One", sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: calc(10px + 2vw);
+}
+
+h3 {
+    font-family: "klee One", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: calc(10px + 1vw);
+}
+
+/*--------------------------------Landing Page*/
+.landing-container {
+    height: 100vh;
+
+    background: url(../images/tennis-player.jpg) no-repeat top center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+
+/*--------------------------------Header*/
+.header-text {
+    color: white;
+    font-size: calc(15px + 5vw);
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+/*--------------------------------Content Styling*/
+.join-container {
+    font-family: "Klee One", sans-serif;
+    background-color: antiquewhite;
+    font-size: calc(10px + 0.5vw);
+}
+
+.community-container {
+    font-family: "Klee One", sans-serif;
+    background-color: lightblue;
+    font-size: calc(10px + 0.5vw);
+}
+
+.testimonials-container {
+    font-family: "Klee One", sans-serif;
+    background-color: lightgreen;
+    font-size: calc(10px + 0.5vw);
+}
+
+.about-container {
+    font-family: "Klee One", sans-serif;
+    background-color: lightcoral;
+    font-size: calc(10px + 0.5vw);
+}
+
+/*--------------------------------Footer*/
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: "Oswald", sans-serif;
+    background-color: rgb(32, 31, 31);
+    color: white;
+    font-size: calc(10px + 0.5vw);
+    text-align: center;
+    padding: 10px;
+}
+
+.footer-contact p {
+    color: rgb(87, 175, 99);
+    font-size: larger;
+}
+.social-buttons {
+    padding-top: 10px;
+}
+
+.form-control {
+    margin: 0 auto;
+    max-width: 50%;
+}
+
+/* Design ideas insired by the Resume project guide */
+.social-buttons li a i {
+    width: 34px;
+    height: 32px;
+    padding: 12px 0;
+    border-radius: 50%;
+    font-size: 18px;
+    line-height: 7px;
+    text-align: center;
+    color: #ffffff;
+    background-color: rgb(150, 150, 150);
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+}
+
+.social-buttons li a i:hover {
+    background-color: rgb(87, 175, 99);
+}
+
+/*--------------------------------Rules Page*/
+.rules-page {
+    padding-top: 60px;
+    padding-bottom: 20px;
+    font-family: "Klee One", sans-serif;
+    background-color: rgb(137, 198, 68);
+    font-size: calc(10px + 0.5vw);
+}
+
+.rules-page h1 {
+    font-size: calc(10px + 2vw);
+    font-weight: bold;
+    
+}
+
+/*--------------------------------Leagues Page*/
+.leagues-container {
+    padding-top: 90px;
+    padding-bottom: 20px;
+    font-family: "Klee One", sans-serif;
+    background-color: rgb(182, 188, 156);
+    font-size: calc(10px + 0.5vw);
+}
+/*--------------------------------Events Page*/
+.events-container {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    padding-top: 60px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: "Klee One", sans-serif;
+    background-color: rgb(137, 198, 68);
+    font-size: calc(10px + 0.5vw);
+}
+
+.event-contents {
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    padding: 10px;
+    margin: 20px;
+    background-color: rgb(182, 188, 156);
+    font-size: calc(10px + 0.5vw);
+}
+
+/*--------------------------------Contact Page*/
+.contact-container {
+    padding-top: 60px;
+    padding-bottom: 20px;
+    font-family: "Klee One", sans-serif;
+    background-color: rgb(182, 188, 156);
+    font-size: calc(10px + 0.5vw);
+}
+
+.form-group {
+    padding: 10px;
+    margin: 0 auto;
+    max-width: 70%;
+}
+/*--------------------------------Media Queries*/
+@media screen and (max-width: 992px) {
+    .form-control {
+        max-width: 75%;
+    }
+}
