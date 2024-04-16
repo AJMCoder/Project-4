@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600;800&family=Oswald:wght@300&display=swap');
-/* FILEPATH: /C:/Users/Alex Mullins/Documents/Coding/Project 4/Project-4/assets/css/style.css */
+/* FILEPATH: /C:/Users/Alex Mullins/Documents/Coding/Project 4/Project-4/static/css/style.css */
 
 /* Container styles */
 
@@ -161,6 +161,21 @@ h3 {
     padding-right: 20px;
     font-family: "Klee One", sans-serif;
     background-color: rgb(137, 198, 68);
+    font-size: calc(10px + 0.5vw);
+}
+
+.event-contents {
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    padding: 10px;
+    margin: 20px;
+    background-color: rgb(182, 188, 156);
     font-size: calc(10px + 0.5vw);
 }
 

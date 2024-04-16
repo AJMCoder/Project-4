@@ -42,7 +42,7 @@
 <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
         <div class="container-fluid">
-            <a href="index.html" class="navbar-brand toplogo">
+            <a href="{% url 'home' %}" class="navbar-brand toplogo nav-link {% if request.path == home_url %}active{%endif%}" aria-current="page">
                 <img src="./assets/images/cityserve-logo.png" alt="logo" width="30" height="30
                 " class="d-inline-block align-text-top">
                 <span class="fw-bold text-secondary">

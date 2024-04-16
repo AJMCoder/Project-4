@@ -9,4 +9,3 @@ class EventList(generic.ListView):
     template_name = "events/index.html"
     context_object_name = "events"
     paginate_by = 6
-
