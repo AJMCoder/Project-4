@@ -1,6 +1,9 @@
 {% load static %}
 {% url 'home' as home_url %}
 {% url 'rules' as rules_url %}
+{% url 'account_login' as login_url %}
+{% url 'account_signup' as signup_url %}
+{% url 'account_logout' as logout_url %}
 
 <!-- To be added later
 {% url 'leagues' as leagues_url %}
@@ -86,11 +89,19 @@
                     <li class="nav-item">
                         <a href="contact.html" class="nav-link">Contact</a>
                     </li>
-                    <li class="nav-item d-md-none">
-                        <a href="login.php" class="nav-link" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
+                    {% if user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page" href="{% url 'account_logout' %}">Logout</a>
                     </li>
-                    <li class="nav-item ms-2 d-none d-md-inline">
-                        <a href="login.php" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
+                    {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == signup_url %}active{% endif %}" aria-current="page"
+                            href="{% url 'account_signup' %}">Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page" href="{% url 'account_login' %}">Login</a>
+                    </li>
+                    {% endif %} 
                 </ul>
             </div>
         </div>

@@ -41,19 +41,19 @@ The link to the live website can be found here:
 The intended use and purpose of CityServe Tennis League is to create tennis for anyone, regardless of ability, age or experience. It is a place where players can come together to form events, competitions or just organise a game of social tennis, but make it accessable to everyone. Creating an event is done with ease and is published straight to the site, where other players can see all of the information given for the event; such as time, location, date, description and the user who created it. Theres is also a comments area where users can give their feedback on events and share their experiences of CityServe, and help the platform to become the best around. Members can also log into their members area and join events directly to let the organisers know they will be there for definite. 
 
 ### Site Goals:
-
+CityServe was built to try and encourage Tennis to be played within the local community. The hope is, that it will bring people closer together, to not only have fun playing sport, but potentially bring opportunities that are beneficial and inspiring within our group of players. We've built a space where players can create events, comment and feedback on upcoming events but also support one another by attending and signing up for those events that people have created and shared.
 
 ### Target Audience:
-...
+The target audience is anyone and everyone, tennis is a hugely inclusive sport that is scientifically proven to be a "lifetime sport" and improve your cardiovascular health (NIH.gov). CityServe caters to all ages, abilities and experience, as it is run by our dedicated team as well as you, the player. Players and staff will organise events throughout the year, so there is always something to do!
 
 ### Navigation:
-...
+The navigation throughout the website is simple, due to clear navigation at the top of the website. The Home Page gives the user or visitor information on what we offer as well as testemonials to show people the experiences of others.
 
 ### Current User Goals:
-...
+Our current goals are for tennis players to have better access to more opportunities to play tennis locally, in an environment they know they can have fun in. It is made by the community, for the community.
 
 ### New User Goals:
-...
+As a new visitor to the site, our goal is to show what we offer, and to give real insights from current players about CityServe. We want people to see that it is a fun and encouraging environment whereby they are welcomed to join any event we have on offer.
 
 ## User Stories
 ### Admin Stories:
@@ -67,7 +67,9 @@ The intended use and purpose of CityServe Tennis League is to create tennis for 
 
 ## Design
 ### Typography:
-...
+The fonts for the website are all chosen from the range within the Google Fonts Library. The current fonts used within the website are
+- Klee One: Site/page headings or titles.
+- 
 
 ### Colour Choices:
 ...
