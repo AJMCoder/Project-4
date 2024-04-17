@@ -1,5 +1,13 @@
-{% url 'home' as home_url %}
 {% load static %}
+{% url 'home' as home_url %}
+{% url 'rules' as rules_url %}
+
+<!-- To be added later
+{% url 'leagues' as leagues_url %}
+{% url 'events' as events_url %}
+{% url 'sponsors' as sponsors_url %}
+{% url 'contact' as contact_url %}
+-->
 
 <!DOCTYPE html>
 <html class="h-100" lang="en">
@@ -61,7 +69,7 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Rules</a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="rules.html">League Rules and Regulations</a></li>
+                            <li><a class="dropdown-item {% if request.path == rules_url %}active{%endif%}" href="{% url 'rules' %}">League Rules and Regulations</a></li>
                             <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="assets/cv/Rules and Regulations.pdf" target="_blank">Download Rules</a></li>
                         </ul>
