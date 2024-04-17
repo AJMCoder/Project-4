@@ -70,16 +70,64 @@ As a new visitor to the site, our goal is to show what we offer, and to give rea
 The fonts for the website are all chosen from the range within the Google Fonts Library. The current fonts used within the website are
 - Klee One: Site/page headings or titles.
 - 
+- 
 
 ### Colour Choices:
-...
+
+*image of colours used*
 
 ## Features
 ### Existing Features:
-...
+
+#### Home Page (Landing Page):
+
+*image of home page*
+
+#### Navigation Bar:
+
+*image*
+
+Desktop view:
+
+*image*
+
+Mobile view:
+
+*image*
+
+#### Rules Page:
+
+*image*
+
+#### Events Page:
+
+*image*
+
+#### Contact Page:
+
+*image*
+
+#### Login Page, Logout and Sign Up Pages:
+
+Login:
+
+*image*
+
+Logout:
+
+*image*
+
+Sign Up:
+
+*image*
+
+#### Footer
+
+*images*
 
 ### C.R.U.D Operations:
-...
+
+
 
 ## Testing
 ### Validator Testing:
