@@ -182,6 +182,7 @@ h3 {
 .masthead-image {
     position: relative;
     overflow: hidden;
+    size-adjust: 100%;
 }
 
 .masthead-image:after {

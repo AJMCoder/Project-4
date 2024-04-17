@@ -18,3 +18,8 @@ class EventDetail(DetailView):
 
     def get_object(self):
         return get_object_or_404(Event, slug=self.kwargs['slug'])
+
+def event_detail(request, slug):
+    query = Event.objects.filter(status=1)
+    event = get_object_or_404(Event, slug=slug)
+    return render(request, 'events/event_detail.html', {'event': event, "author": "event.author"},)
