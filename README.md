@@ -2,7 +2,9 @@
 
 CityServe Tennis League offers a delightful blend of friendly, social, and competitive tennis for enthusiasts of all skill levels. It's not just about the game; it's also about fostering a sense of community and camaraderie among its members. Whether you're a seasoned player looking for some challenging matches or a beginner seeking a welcoming environment to improve your skills, CityServe Tennis League has something for everyone. Joining this league is a great way to stay active, make new friends, and enjoy the thrill of tennis in a supportive setting.
 
-The link to the live website can be found here:
+![Site responsiveness](static/images/readme/responsiveness.png)
+
+The link to the live website can be found [here](https://city-serve-f48d9e79e0a9.herokuapp.com/).
 
 Admin login credentials are as follows: 
 - Username: CityServe
@@ -73,8 +75,6 @@ As a new visitor to the site, our goal is to show what we offer, and to give rea
 ### Typography:
 The fonts for the website are all chosen from the range within the Google Fonts Library. The current fonts used within the website are
 - Klee One: Site/page headings or titles.
-- 
-- 
 
 ### Colour Choices:
 
@@ -161,7 +161,7 @@ On the Events page, I would like the users to be able to comment and sign up for
 - When installing the Django files, I was met with numerous error messages stating my commands not being recognised within the terminal. With the assistance of a mentor i was able to rectify this problem by by selected a new default terminal 'command prompt'.
 - During the Django installation I was met with another issue whereby my 'events' folder was not being recognised why trying to run a server and thus was resulting in a failed load. Running through my code i could see that URLPatterns path for the folder was writen okay, but i had forgotten to include the '*from events import views as events_views*'
 - Resolved and issue within the database model where an error was occuring when trying to add a method to the Events model. I had opted to use 'user' to display the author of the post and had mismatched my mode when following along the creation guide. However, I was able to fix the issue by removing 'author' as an option and kept it as the user name for the post creator.
-- 
+- The was an issue with migrations due to changes being made that affected a prior migration. To fix this, I was guided by the tutor team to delete the database and create a new one, then do makemigrations and migrate again. This fixed this issue and allowed futher migrations to happen.
 
 ### Current Bugs:
 - When trying to add a comment form, the body field is not being displayed for logged in users to comment on events with.
@@ -171,25 +171,68 @@ On the Events page, I would like the users to be able to comment and sign up for
 ## Technologies Used
 ### Frameworks, Libraries and Programs
 
-- Bootstrap 5: 
-- GitHub:
-- Font Awesome:
-- Visual Studio Code:
+- Bootstrap 5
+- GitHub
+- Font Awesome
+- Visual Studio Code
+- Gitpod
 
 ### Languages
 
 - HTML
 - CSS
 - JavaScript
+- Python
+- Django
+- SQL
 
 ## Deployment
-...
+
+### Running the project locally
+1. Go to [the project repository](https://github.com/AJMCoder/Project-4)
+2. Click on the "Code" button.
+3. Choose one of the three options (HTTPS, SSH or GitHub CLI) and then click copy.
+4. Open the terminal in you IDE program. 
+5. Type `git clone` and paste the URL that was copied in step 3.
+6. Press Enter and the local clone will be created.
+
+### Deploying with Heroku
+
+1. Go to [Heroku.com](https://dashboard.heroku.com/apps) and log in; if you do not already have an account then you will need to create one.
+2. Click the `New` dropdown and select `Create New App`.
+3. Enter a name for your new project, all Heroku apps need to have a unique name, you will be prompted if you need to change it.
+4. Select the region you are working in.
+
+#### Heroku Settings  
+You will need to set your Environment Variables - this is a key step to ensuring your application is deployed properly.
+1. In the Settings tab, click on `Reveal Config Vars` and set the following variables:
+    - Add key: `PORT` & value `8000`
+    - Add key: DATABASE_URL, this should have been created automatically by Heroku.
+    - Add key: CLOUDINARY_URL and the value as your cloudinary API Environment variable e.g.
+    - Add key: SECRET_KEY and the value as a complex string which will be used to provide cryptographic signing.
+
+2. Buildpacks are also required for proper deployment, simply click `Add buildpack` and search for the ones that you require.
+    - For this project, I needed to add `Python`.
+
+####  Heroku Deployment  
+In the Deploy tab:
+1. Connect your Heroku account to your Github Repository following these steps:
+    - Click on the `Deploy` tab and choose `Github-Connect to Github`.
+    - Enter the GitHub repository name and click on `Search`.
+    - Choose the correct repository for your application and click on `Connect`.
+2. You can then choose to deploy the project manually or automatically, automatic deployment will generate a new application every time you push a change to Github, whereas manual deployment requires you to push the `Deploy Branch` button whenever you want a change made.
+3. Once you have chosen your deployment method and have clicked `Deploy Branch` your application will be built and you should now see the `View` button, click this to open your application.
 
 ## Credits
 ### Inspired Works:
 - Inspiration taken from [Net Ninja](https://www.youtube.com/watch?v=yCCIztB-S_k&list=PL4cUxeGkcC9joIM91nLzd_qaH_AimmdAR&index=8).
 - Responsive Font Size formula adapted from [Matthew James Taylor](https://matthewjamestaylor.com/  responsive-font-size#:~:text=To%20make%20font%20size%20responsive%20in%20steps%2C%20set%20the%20base,relative%20to%20the%20screen%20width.).
-- Resources used from [Codecademy](https://www.codecademy.com/resources/docs/swift/arrays), and Mimo Coding App.
+- Resources used from [Codecademy](https://www.codecademy.com/resources/docs), and Mimo Coding App. 
 
 ### Media:
-...
+- The images used for the Landing page was from [Pexels](https://www.pexels.com/).
+
+### Acknowledgements
+  - The tutor support team at Code Institute for their support.
+  - My Code Institute Mentor for feedback and suggestions.
+  - The Code Institute Slack community.
