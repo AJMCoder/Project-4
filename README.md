@@ -4,6 +4,10 @@ CityServe Tennis League offers a delightful blend of friendly, social, and compe
 
 The link to the live website can be found here:
 
+Admin login credentials are as follows: 
+- Username: CityServe
+- Password: Server39410
+
 ## Table of contents
 
 + [UX](#ux "UX")
@@ -79,51 +83,63 @@ The fonts for the website are all chosen from the range within the Google Fonts 
 ## Features
 ### Existing Features:
 
-#### Home Page (Landing Page):
-
-*image of home page*
-
 #### Navigation Bar:
-
-*image*
 
 Desktop view:
 
-*image*
+![Desktop Navbar](static/images/readme/nav-bar.png)
 
 Mobile view:
 
-*image*
+![Mobile Navbar](static/images/readme/navbar-mobile.png)
 
 #### Rules Page:
 
-*image*
+![Rules Page](static/images/readme/rules.png)
 
 #### Events Page:
 
-*image*
+![Events Page](static/images/readme/events-page.png)
 
-#### Contact Page:
+#### Event Details:
 
-*image*
+![Event Details](static/images/readme/event-details.png)
 
 #### Login Page, Logout and Sign Up Pages:
 
 Login:
 
-*image*
+![Login Page](static/images/readme/signin.png)
 
 Logout:
 
-*image*
+![Logout Page](static/images/readme/logout.png)
 
 Sign Up:
 
-*image*
+![Sign Up Page](static/images/readme/signup.png)
 
 #### Footer
 
-*images*
+![Footer](static/images/readme/footer.png)
+
+### Future Features: *Basic HTML was created for some of these pages but could not be properly implemented in time for the websites release/submision.*
+
+#### Home Page (Landing Page):
+
+![Landing Page](static/images/readme/landing-page.jpg)
+
+#### Leagues Page:
+
+![Leagues Page](static/images/readme/league-page.png)
+
+#### Contact Page:
+
+![Contact Page](static/images/readme/contact-page.png)
+
+#### Comment Form for Events Page:
+
+On the Events page, I would like the users to be able to comment and sign up for events directly once they have interacted with them. Development of the comment form did take place but bugs occured before deployment due to text body field not appearing. A fix was tried but it resulted in users not being able to submit their comments and be stored.
 
 ### C.R.U.D Operations:
 
