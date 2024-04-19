@@ -53,7 +53,7 @@
     <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
         <div class="container-fluid">
             <a href="{% url 'home' %}" class="navbar-brand toplogo nav-link {% if request.path == home_url %}active{%endif%}" aria-current="page">
-                <img src="{% static 'images/cityserve-logo.png' %}"" alt="logo" width="30" height="30
+                <img src="{% static 'images/cityserve-logo.png' %}" alt="logo" width="30" height="30
                 " class="d-inline-block align-text-top">
                 <span class="fw-bold text-secondary">
                     CityServe Tennis League
@@ -66,9 +66,6 @@
             <!-- Navbar Links -->
             <div class="collapse navbar-collapse justify-content-end align-center navbar-expand-lg" id="navbar">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a href="index.html" class="nav-link">Home</a>
-                    </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Rules</a>
                         <ul class="dropdown-menu">
@@ -78,13 +75,7 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a href="leagues.html" class="nav-link">Leagues</a>
-                    </li>
-                    <li class="nav-item">
                         <a href="events.html" class="nav-link">Events</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="sponsors.html" class="nav-link">Sponsors</a>
                     </li>
                     <li class="nav-item">
                         <a href="contact.html" class="nav-link">Contact</a>
@@ -106,9 +97,27 @@
             </div>
         </div>
     </nav>
+    <!-- displaying Django messages -->
+    <div class="container">
+        <div class="row">
+        <div class="col-md-8 offset-md-2">
+            {% for message in messages %}
+            <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
+            {{ message | safe }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            {% endfor %}
+        </div>
+        </div>
+    </div>
     <!-- Main Content -->
     <main class="flex-shrink-0 main-bg">
-
+        {% if user.is_authenticated %}
+        <p class="text-end m-3">You are logged in as {{ user }}</p>
+        {% else %}
+        <p class="text-end m-3">You are not logged in</p>
+        {% endif %}
+    
     {% block content %}
     {% endblock %}
 

@@ -5,13 +5,13 @@
 
 /*--------------------------------General Styling*/
 body {
+    padding-top: 57px;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
 main {
-    height: -webkit-fill-available;
     flex: 1 1 auto;
 }
 
@@ -32,8 +32,7 @@ h3 {
 /*--------------------------------Landing Page*/
 .landing-container {
     height: 100vh;
-
-    background: url(../images/tennis-player.jpg) no-repeat top center fixed;
+    background: url(../images/tennis-player.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -155,7 +154,7 @@ h3 {
     display: flex;
     height: 100%;
     flex-direction: column;
-    padding-top: 60px;
+    padding-top: 20px;
     padding-bottom: 20px;
     padding-left: 20px;
     padding-right: 20px;
@@ -165,7 +164,6 @@ h3 {
 }
 
 .event-contents {
-    padding: 60px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -180,13 +178,17 @@ h3 {
     font-size: calc(10px + 0.5vw);
 }
 
-.masthead {
+.card-text p {
+    font-family: "Klee One", sans-serif;
+    font-size: calc(10px + 0.5vw);
+
+}
+
+.event-title {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 60px;
-    height: 40%;
     margin: 10px;
 }
 

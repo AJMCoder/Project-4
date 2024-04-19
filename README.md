@@ -127,7 +127,8 @@ Sign Up:
 
 ### C.R.U.D Operations:
 
-
+#### Create:
+- The create button on our "Events" page is there for registered users to add events or social activities they are wanting to run as part of the tennis club.
 
 ## Testing
 ### Validator Testing:
@@ -145,6 +146,11 @@ Sign Up:
 - During the Django installation I was met with another issue whereby my 'events' folder was not being recognised why trying to run a server and thus was resulting in a failed load. Running through my code i could see that URLPatterns path for the folder was writen okay, but i had forgotten to include the '*from events import views as events_views*'
 - Resolved and issue within the database model where an error was occuring when trying to add a method to the Events model. I had opted to use 'user' to display the author of the post and had mismatched my mode when following along the creation guide. However, I was able to fix the issue by removing 'author' as an option and kept it as the user name for the post creator.
 - 
+
+### Current Bugs:
+- When trying to add a comment form, the body field is not being displayed for logged in users to comment on events with.
+- Navbar links don't correctly navigate users to the associated pages.
+- Contact form is no longer synced to the website. It needs to be reconnected once a new page is created for it.
 
 ## Technologies Used
 ### Frameworks, Libraries and Programs

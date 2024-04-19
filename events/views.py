@@ -1,7 +1,9 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic 
+from django.contrib import messages
 from django.views.generic import DetailView
 from .models import Event
+from .forms import CommentForm
 
 # Create your views here.
 class EventList(generic.ListView):
@@ -22,4 +24,32 @@ class EventDetail(DetailView):
 def event_detail(request, slug):
     query = Event.objects.filter(status=1)
     event = get_object_or_404(Event, slug=slug)
-    return render(request, 'events/event_detail.html', {'event': event, "author": "event.author"},)
+    comments = event.comments.all().order_by('-created_at')
+    comment_count = comments.count.filter(approved=True).count()
+    comment_form = CommentForm()
+
+    if request.method == 'POST':
+        comment_form = CommentForm(request.POST)
+        if comment_form.is_valid():
+            new_comment = comment_form.save(commit=False)
+            new_comment.post = event
+            new_comment.author = request.user
+            new_comment.save()
+            messages.add_message(
+            request, messages.SUCCESS,
+            'Comment submitted and awaiting approval'
+            )
+    comment_form = CommentForm()
+
+
+    return render(
+        request,
+        'events/event_detail.html',
+        {
+            "event": event,
+            "comments": comments,
+            "author": event.author,
+            "comment_count": comment_count,
+            "comment_form": comment_form
+        },
+    )

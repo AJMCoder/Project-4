@@ -1,34 +1,82 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'base.html' %}
 {% load static %}
+{% load crispy_forms_tags %}
 
-<div class="masthead">
+{% block content %}
+
+<!-- This is the event detail page adapted from the CI Blogs Project -->
+<div class="event-title">
     <div class="container">
         <div class="row g-0">
-            <div class="col-md-6 masthead-text">
-                <!-- Event title goes in these h1 tags -->
+            <div class="col-md-6">
                 <h1 class="event-title">{{ event.title }}</h1>
-                <!-- Post author goes before the | the post's created date goes after -->
                 <p class="event-subtitle">{{ event.author }} | {{ event.created_at }}</p>
-            </div>
-            <div class="d-none d-md-block col-md-6 masthead-image">
             </div>
         </div>
     </div>
 </div>
 
-<div class="container">
+<div class="container event-description">
     <div class="row">
         <div class="col card mb-4  mt-3 left  top">
             <div class="card-body">
-                <!-- The event description goes inside the card-text. -->
-                <!-- Use the | safe filter inside the template tags -->
-                <h2>{{ coder }}</h2>
                 <p class="card-text">
                     {{ event.description | safe }}
                 </p>
             </div>
         </div>
     </div>
-</div>
 
+    <div class="row">
+        <div class="col-12">
+        <strong class="text-secondary">
+            <i class="far fa-comments"></i> {{ comment_count }}
+        </strong>
+        </div>
+        <div class="col-12">
+        <hr>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-8 card mb-4  mt-3 ">
+        <h3>Comments:</h3>
+        <div class="card-body">
+            {% for comment in comments %}
+            <div class="p-2 comments{% if not comment.approved and comment.author == user %}faded{% elif not comment.approved %} d-none{% endif %}">
+            <p class="font-weight-bold">
+                {{ comment.author }}
+                <span class="font-weight-normal">
+                {{ comment.created_at }}
+                </span> wrote:
+            </p>
+            <div id="comment{{ comment.id }}">
+                {{ comment.body | linebreaks }}
+            </div>
+            {% if not comment.approved and comment.author == user %}
+            <p class="approval">
+                This comment is awaiting approval
+            </p>
+            {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+        </div>
+        <div class="col-md-4 card mb-4 mt-3">
+            <div class="card-body">
+            {% if user.is_authenticated %}
+            <h3>Leave a comment:</h3>
+            <p>Commenting as: {{ user.username }}</p>
+            <form id="commentForm" method="post" action="{% url 'event_detail' slug=event.slug %}" style="margin-top: 1.3em;">
+                {% csrf_token %}
+                <textarea id="id_body" name="body" rows="5" cols="40">{{ comment_form.body.value|default_if_none:'' }}</textarea>
+                <button id="submitButton" type="submit" class="btn btn-success btn-lg">Send</button>
+            </form>
+            {% else %}
+            <p>Log in to leave a comment</p>
+            {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock content %}
