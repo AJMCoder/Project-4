@@ -1,0 +1,18 @@
+<!-- matches/templates/matches/submit_match.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Submit Match Result</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+    {% if messages %}
+        <ul>
+            {% for message in messages %}
+                <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+{% endblock %}

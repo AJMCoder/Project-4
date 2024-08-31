@@ -64,17 +64,17 @@
         </div>
         <div class="col-md-4 card mb-4 mt-3">
             <div class="card-body">
-            {% if user.is_authenticated %}
-            <h3>Leave a comment:</h3>
-            <p>Commenting as: {{ user.username }}</p>
-            <form id="commentForm" method="post" action="{% url 'event_detail' slug=event.slug %}" style="margin-top: 1.3em;">
-                {% csrf_token %}
-                <textarea id="id_body" name="body" rows="5" cols="40">{{ comment_form.body.value|default_if_none:'' }}</textarea>
-                <button id="submitButton" type="submit" class="btn btn-success btn-lg">Send</button>
-            </form>
-            {% else %}
-            <p>Log in to leave a comment</p>
-            {% endif %}
+                {% if user.is_authenticated %}
+                <h3>Leave a comment:</h3>
+                <p>Commenting as: {{ user.username }}</p>
+                <form id="commentForm" method="post" style="margin-top: 1.3em;">
+                    {% csrf_token %}
+                    {{ comment_form.as_p}}
+                    <button id="submitButton" type="submit" class="btn btn-success btn-lg">Send</button>
+                </form>
+                {% else %}
+                <p>Log in to leave a comment</p>
+                {% endif %}
             </div>
         </div>
     </div>

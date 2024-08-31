@@ -1,9 +1,13 @@
 {% load static %}
 {% url 'home' as home_url %}
 {% url 'rules' as rules_url %}
+{% url 'recent_matches' as recent_matches_url %}
+{% url 'submit_match' as submit_match_url %}
+{% url 'matches' as matches_url %}
 {% url 'account_login' as login_url %}
 {% url 'account_signup' as signup_url %}
 {% url 'account_logout' as logout_url %}
+
 
 <!-- To be added later
 {% url 'leagues' as leagues_url %}
@@ -69,12 +73,14 @@
                     <li class="nav-item">
                         <a href="{% url 'home' %}" class="nav-link {% if request.path == home_url %}active{%endif%}">Events</a>
                     </li>
+                    <li class="nav-item">
+                        <a href="{{ recent_matches_url }}" class="nav-link {% if request.path == recent_matches_url %}active{%endif%}">Matches</a>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Rules</a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item {% if request.path == rules_url %}active{%endif%}" href="{% url 'rules' %}">League Rules and Regulations</a></li>
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="assets/cv/Rules and Regulations.pdf" target="_blank">Download Rules</a></li>
+                            <li><a class="dropdown-item" href="{% static 'images/Rules and Regulations.pdf' %}" target="_blank">Download Rules</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">

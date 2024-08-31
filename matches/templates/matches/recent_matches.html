@@ -1,0 +1,12 @@
+<!-- matches/templates/matches/recent_matches.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Recently Played Matches</h1>
+    <ul>
+        {% for match in matches %}
+            <li>{{ match.player1 }} vs {{ match.player2 }} - {{ match.score }} on {{ match.date_played }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'submit_match' %}">Submit Your Match Result</a>
+{% endblock %}
