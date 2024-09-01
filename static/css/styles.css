@@ -31,6 +31,14 @@ h3 {
     font-size: calc(10px + 1vw);
 }
 
+.dropdown-item {
+    white-space: wrap;
+}
+
+a {
+    text-decoration: none;
+}
+
 /*--------------------------------Landing Page*/
 .landing-container {
     height: 100vh;
