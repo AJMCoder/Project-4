@@ -30,6 +30,13 @@ class Event(models.Model):
     # Created a save method to automatically create a slug for the event
     def save(self, *args, **kwargs):
         self.slug = self.slug or slugify(self.title)
+        # Ensure the slug is unique
+        unique_slug = self.slug
+        num = 1
+        while Event.objects.filter(slug=unique_slug).exists():
+            unique_slug = f'{self.slug}-{num}'
+            num += 1
+        self.slug = unique_slug
         super().save(*args, **kwargs)
 
 class Comment(models.Model):

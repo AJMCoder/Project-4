@@ -1,17 +1,35 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
+from django.contrib.auth.decorators import login_required
 from django.views import generic 
 from django.contrib import messages
 from django.views.generic import DetailView
 from .models import Event, Comment
-from .forms import CommentForm
+from .forms import CommentForm, EventForm
+
+@login_required
+def create_event(request):
+    if request.method == 'POST':
+        form = EventForm(request.POST)
+        if form.is_valid():
+            event = form.save(commit=False)
+            event.author = request.user
+            event.save()
+            return redirect('event_detail', slug=event.slug)
+    else:
+        form = EventForm()
+    return render(request, 'events/create_event.html', {'form': form})
 
 # Create your views here.
 class EventList(generic.ListView):
     model = Event
     queryset = Event.objects.filter(status=1)
-    template_name = "events/index.html"
+    template_name = "events/events.html"
     context_object_name = "events"
     paginate_by = 6
+
+def event_list(request):
+    events = Event.objects.filter(status=1)
+    return render(request, 'events/events.html', {'events': events})
 
 class EventDetail(DetailView):
     model = Event

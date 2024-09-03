@@ -1,10 +1,12 @@
 {% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
 
 {% block content %}
 
-<!-- index.html content starts here -->
+<!-- events.html content starts here -->
 
-<div class="container-fluid event-contents" style="margin-top: 3rem !important;">
+<div class="container-fluid event-contents" style="margin-top: 3rem !important;"> 
     <div class="row">
 
         <!-- Event Entries -->
@@ -23,7 +25,6 @@
                                 <h2 class="card-title">{{ event.title }}</h2>
                                 <p class="card-text">{{ event.excerpt }}</p>
                             </a>
-
                             <hr />
                             <p class="card-text text-muted h6">{{ event.created_at}}
                             </p>
@@ -39,6 +40,16 @@
             </div>
         </div>
     </div>
+
+    <!-- Event Creation Form -->
+    <div class="row">
+        <div class="col-12 mt-3">
+            <h2>Create a New Event</h2>
+            <a href="{% url 'create_event' %}" class="btn btn-primary">Create Event</a>
+        </div>
+    </div>
+
+    <!-- Pagination -->
 
     {% if is_paginated %}
     <nav aria-label="Page navigation">
@@ -60,6 +71,6 @@
     {% endif %}
 </div>
 
-<!-- index.html content ends here -->
+<!-- events.html content ends here -->
 
 {% endblock %}
