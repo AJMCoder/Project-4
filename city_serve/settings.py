@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     'rules',
     'home',
     'matches',
+    'contact',
 ]
 
 SITE_ID = 1

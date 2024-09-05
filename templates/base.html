@@ -5,17 +5,11 @@
 {% url 'recent_matches' as recent_matches_url %}
 {% url 'submit_match' as submit_match_url %}
 {% url 'matches' as matches_url %}
+{% url 'contact' as contact_url %}
 {% url 'account_login' as login_url %}
 {% url 'account_signup' as signup_url %}
 {% url 'account_logout' as logout_url %}
 
-
-<!-- To be added later
-{% url 'leagues' as leagues_url %}
-{% url 'events' as events_url %}
-{% url 'sponsors' as sponsors_url %}
-{% url 'contact' as contact_url %}
--->
 
 <!DOCTYPE html>
 <html class="h-100" lang="en">
@@ -85,7 +79,7 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a href="contact.html" class="nav-link">Contact</a>
+                        <a href="{% url 'contact' %}" class="nav-link {% if request.path == contact_url %}active{%endif%}">Contact</a>
                     </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item">

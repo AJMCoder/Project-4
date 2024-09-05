@@ -24,6 +24,7 @@ urlpatterns = [
     path("rules/", include("rules.urls"), name='rules-urls'),
     path("events/", include("events.urls"), name='events-urls'),
     path("matches/", include("matches.urls"), name='matches-urls'),
+    path("contact/", include("contact.urls"), name='contact-urls'),
     path('summernote/', include('django_summernote.urls')),
 
 ]

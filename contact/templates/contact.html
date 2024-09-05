@@ -1,0 +1,31 @@
+{% extends 'base.html' %}{% load static %}{% load crispy_forms_tags %}{% block title %} Contact {%endblock%}
+{% block content %}
+
+<section>
+  <div class="container-fluid px-4 px-lg-5">
+    <h1 class="mb-4 mt-3 text-center top-text">Contact Us</h1>
+    <hr>
+  </div>
+</section>
+
+<!-- Contact form -->
+
+<div class="container cont-custom">
+  <div id="contact" class="card-body">
+    <div class="card contact-form">
+      <div class="card-body text-center">
+        <form method="post">
+          {{ contact_form | crispy }} {% csrf_token %}
+          <script>
+            document
+              .getElementById("id_email")
+              .setAttribute("autocomplete", "email");
+          </script>
+          <br>
+          <button type="submit" class="btn main-btn form-btn">Send</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
