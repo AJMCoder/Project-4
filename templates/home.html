@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
 {% load static %}
+
 <!-- Landing Section -->
 <section id="tennis-player">
     <div class="container-fluid landing-container" id="cover-text">
@@ -11,12 +12,12 @@
     <!-- How to join section -->
     <section id="how-to-join">
         <div class="join-container container-lg text-center my-5">
-            <h2>HOW TO JOIN</h2>
+            <h2 class="mb-4">HOW TO JOIN</h2>
             <div class="row">
                 <div class="col-md-4">
                     <h3>STEP 1</h3>
                     <hr>
-                    <p>Register your interest by completing the form on the <a href="contact.html">contact</a> page.</p>
+                    <p>Register your interest by completing the form on the <a href="{% url 'contact' %}">contact</a> page.</p>
                 </div>
                 <div class="col-md-4">
                     <h3>STEP 2</h3>
@@ -34,8 +35,7 @@
     
     <section id="why-us">
         <div class="community-container container-lg text-center my-5">
-          <div class="text-center">
-            <h2>WHY JOIN US?</h2>
+            <h2 class="mb-4">WHY JOIN US?</h2>
             <div class="row">
                 <div class="col-md-4">
                     <h3>COMPETITIVE TENNIS</h3>
@@ -53,19 +53,12 @@
                     <p>Keep fit and active by playing tennis regularly.</p>  
                 </div>
             </div>
-          </div>  
         </div>
     </section>
-
-    <section id="joining" class="bg-light mt-5">
-      <div class="container-lg text-center">
-        <h2>How to join</h2>
-      </div>
-    </section>
-
+    
     <section id="testimonials">
         <div class="testimonials-container container-lg text-center my-5">
-            <h2>TESTIMONIALS</h2>
+            <h2 class="mb-4">TESTIMONIALS</h2>
             <div class="row">
                 <div class="col-md-4">
                     <h3>JOHN SMITH</h3>
@@ -85,12 +78,12 @@
             </div>
         </div>
     </section>
-
+    
     <section id="about-us">
         <div class="about-container container-lg text-center my-5">
-            <h2>ABOUT US</h2>
-            <p>CityServe Tennis holds a paramount significance within our local community, acting as the vibrant heartbeat of our shared passion for tennis. This league not only fosters a sense of camaraderie and friendly competition among tennis enthusiasts but also serves as a catalyst for a healthier and more active lifestyle. Beyond the exhilarating matches on the court, CityServe Tennis has become a melting pot for building lasting friendships and connections. By bringing individuals together through the shared love of tennis, this league not only promotes physical well-being but also contributes to the social fabric of our community. It provides a platform for players of all skill levels to engage, learn, and grow, making CityServe Tennis an indispensable part of our local sports culture.</p>
-            <p>CityServe Tennis League is a friendly, competitive tennis league for adults. We have leagues in Cheshire, Shropshire and Staffordshire. We are always looking for new players to join our leagues. If you are interested in joining, please register your interest on the <a href="contact.html">contact</a> page.</p>
+            <h2 class="mb-4">ABOUT US</h2>
+            <p class="mb-4">CityServe Tennis holds a paramount significance within our local community, acting as the vibrant heartbeat of our shared passion for tennis. This league not only fosters a sense of camaraderie and friendly competition among tennis enthusiasts but also serves as a catalyst for a healthier and more active lifestyle. Beyond the exhilarating matches on the court, CityServe Tennis has become a melting pot for building lasting friendships and connections. By bringing individuals together through the shared love of tennis, this league not only promotes physical well-being but also contributes to the social fabric of our community. It provides a platform for players of all skill levels to engage, learn, and grow, making CityServe Tennis an indispensable part of our local sports culture.</p>
+            <p>CityServe Tennis League is a friendly, competitive tennis league for adults. We have leagues in Cheshire, Shropshire, and Staffordshire. We are always looking for new players to join our leagues. If you are interested in joining, please register your interest on the <a href="{% url 'contact' %}">contact</a> page.</p>
         </div>
     </section>
 {% endblock content %}

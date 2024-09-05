@@ -2,11 +2,24 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>Recently Played Matches</h1>
-    <ul>
-        {% for match in matches %}
-            <li>{{ match.player1 }} vs {{ match.player2 }} - {{ match.score }} on {{ match.date_played }}</li>
-        {% endfor %}
-    </ul>
-    <a href="{% url 'submit_match' %}">Submit Your Match Result</a>
+    <div class="container mt-5">
+        <h1 class="mb-4">Recently Played Matches</h1>
+        
+        {% if matches %}
+            <ul class="list-group mb-4">
+                {% for match in matches %}
+                    <li class="list-group-item">
+                        <strong>{{ match.player1 }}</strong> vs <strong>{{ match.player2 }}</strong> - 
+                        <span class="text-muted">{{ match.score }}</span> 
+                        <br>
+                        <small class="text-muted">Played on {{ match.date_played }}</small>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p class="text-muted">No matches have been played recently.</p>
+        {% endif %}
+        
+        <a href="{% url 'submit_match' %}" class="btn btn-primary mb-4">Submit Your Match Result</a>
+    </div>
 {% endblock %}
