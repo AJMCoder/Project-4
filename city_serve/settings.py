@@ -135,6 +135,7 @@ if 'test' in sys.argv:
 CSRF_TRUSTED_ORIGINS = [
     "https://*.gitpod.io/",
     "https://*.herokuapp.com"
+    "https://responsivedesignchecker.com",
 ]
 
 # Password validation
