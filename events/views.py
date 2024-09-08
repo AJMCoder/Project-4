@@ -61,7 +61,7 @@ class EventUpdateView(UpdateView):
 class EventDeleteView(DeleteView):
     model = Event
     template_name = 'events/event_confirm_delete.html'
-    success_url = reverse_lazy('event_list')
+    success_url = reverse_lazy('events')
 
     def get_object(self, queryset=None):
         """ Hook to ensure object is owned by request.user. """
