@@ -1,8 +1,11 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
+from django.core.exceptions import PermissionDenied
 from django.views import generic 
 from django.contrib import messages
 from django.views.generic import DetailView
+from django.views.generic.edit import DeleteView
+from django.urls import reverse_lazy
 from .models import Event, Comment
 from .forms import CommentForm, EventForm
 
@@ -38,6 +41,23 @@ class EventDetail(DetailView):
 
     def get_object(self):
         return get_object_or_404(Event, slug=self.kwargs['slug'])
+
+# Allow users to delete their own events.
+class EventDeleteView(DeleteView):
+    model = Event
+    template_name = 'events/event_confirm_delete.html'
+    success_url = reverse_lazy('event_list')
+
+    def get_object(self, queryset=None):
+        """ Hook to ensure object is owned by request.user. """
+        obj = super().get_object(queryset=queryset)
+        if not obj.author == self.request.user:
+            raise PermissionDenied()
+        return obj
+
+    def get_success_url(self):
+        return reverse_lazy('event_detail', kwargs={'slug': self.object.slug})
+
 
 def event_detail(request, slug):
     queryset = Event.objects.filter(status=1)
