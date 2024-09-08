@@ -12,6 +12,7 @@
                 <h1 class="event-title">{{ event.title }}</h1>
                 <p class="event-subtitle">{{ event.author }} | {{ event.created_at }}</p>
                 {% if event.author == user %}
+                    <a href="{% url 'event_edit' event.pk %}" class="btn btn-primary">Edit Event</a>
                     <a href="{% url 'event_delete' event.pk %}" class="btn btn-danger">Delete Event</a>
                 {% endif %}
             </div>

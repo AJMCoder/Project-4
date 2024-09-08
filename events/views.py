@@ -3,7 +3,7 @@ from django.contrib.auth.decorators import login_required
 from django.core.exceptions import PermissionDenied
 from django.views import generic 
 from django.contrib import messages
-from django.views.generic import DetailView
+from django.views.generic import DetailView, UpdateView
 from django.views.generic.edit import DeleteView
 from django.urls import reverse_lazy
 from .models import Event, Comment
@@ -41,6 +41,21 @@ class EventDetail(DetailView):
 
     def get_object(self):
         return get_object_or_404(Event, slug=self.kwargs['slug'])
+    
+# Allow users to update their own events.
+class EventUpdateView(UpdateView):
+    model = Event
+    form_class = EventForm
+    template_name = 'events/event_form.html'
+    success_url = reverse_lazy('events')
+
+    def get_object(self, queryset=None):
+        """ Hook to ensure object is owned by request.user. """
+        obj = super().get_object(queryset=queryset)
+        if not obj.author == self.request.user:
+            raise PermissionDenied()
+        return obj
+
 
 # Allow users to delete their own events.
 class EventDeleteView(DeleteView):
@@ -57,6 +72,7 @@ class EventDeleteView(DeleteView):
 
     def get_success_url(self):
         return reverse_lazy('event_detail', kwargs={'slug': self.object.slug})
+    
 
 
 def event_detail(request, slug):
