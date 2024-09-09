@@ -8,7 +8,7 @@
     </section>
     <!-- Inspiration for Website design used from Net Ninja -->
 <!-- How to join section -->
-<section id="how-to-join" class="py-5 bg-light">
+<section id="how-to-join" class="py-5 bg-light py-5">
     <div class="container-lg text-center">
         <h2 class="display-4 text-uppercase mb-5">How to Join</h2>
         <div class="row">
@@ -16,7 +16,7 @@
                 <div class="p-4 border rounded shadow-sm">
                     <h3 class="h4">Step 1</h3>
                     <hr>
-                    <p>Register your interest by completing the form on the <a href="#" class="text-primary">contact</a> page.</p>
+                    <p>Register your interest by completing the form on the <a href="{% url 'contact' %}" class="text-primary">contact</a> page.</p>
                 </div>
             </div>
             <div class="col-md-4">
@@ -67,14 +67,6 @@
     </div>
 </section>
 
-<!-- Joining Section -->
-<section id="joining" class="bg-primary text-white py-5">
-    <div class="container-lg text-center">
-        <h2 class="display-4">How to Join</h2>
-        <p class="lead">Join today and start playing in your local league!</p>
-    </div>
-</section>
-
 <!-- Testimonials Section -->
 <section id="testimonials" class="py-5 bg-light">
     <div class="container-lg text-center">
@@ -111,7 +103,7 @@
         <h2 class="display-4 text-uppercase mb-4">About Us</h2>
         <p class="lead">CityServe Tennis holds a paramount significance within our local community, acting as the vibrant heartbeat of our shared passion for tennis.</p>
         <p>CityServe Tennis League is a friendly, competitive tennis league for adults. We have leagues in Cheshire, Shropshire, and Staffordshire. We are always looking for new players to join our leagues.</p>
-        <a href="contact.html" class="btn btn-primary btn-lg mt-3">Contact Us</a>
+        <a href="{% url 'contact' %}" class="btn btn-primary btn-lg mt-3">Contact Us</a>
     </div>
 </section>
 {% endblock %}
