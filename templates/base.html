@@ -97,14 +97,6 @@
                 </ul>
             </div>
         </div>
-        <div class="User-message" style="position: absolute; right: 0; bottom: -98%; background-color: white;">
-                    <!-- Displaying the user's login status -->
-            {% if user.is_authenticated %}
-            <p class="text-end m-3">You are logged in as {{ user }}</p>
-            {% else %}
-            <p class="text-end m-3">You are not logged in</p>
-            {% endif %}
-        </div>
     </nav>
 
     <!-- displaying Django messages -->
@@ -117,6 +109,14 @@
                 </div>
                 {% endfor %}
             </div>
+        </div>
+        <div class="user-message-container">
+            <!-- Displaying the user's login status -->
+            {% if user.is_authenticated %}
+            <p class="text-end m-3">You are logged in as {{ user }}</p>
+            {% else %}
+            <p class="text-end m-3">You are not logged in</p>
+            {% endif %}
         </div>
     </div>
 
