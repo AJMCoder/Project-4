@@ -4,11 +4,15 @@ CityServe Tennis League offers a delightful blend of friendly, social, and compe
 
 ![Site responsiveness](static/images/readme/responsiveness.png)
 
-The link to the live website can be found [here]().
+The link to the live website can be found [here](https://city-serve-f48d9e79e0a9.herokuapp.com/).
 
-Admin login credentials are as follows: 
-- Username: CityServe
-- Password: Server39410
+Admin login credentials are below:
+
+<details><summary>Login Details</summary>
+<p>Username: CityServe</p>
+<p>Password: Server39410</p>
+</details>
+
 
 ## Table of contents
 
@@ -193,6 +197,7 @@ For detailed information on testing, please refer to the [Testing Documentation]
 - During the Django installation I was met with another issue whereby my 'events' folder was not being recognised why trying to run a server and thus was resulting in a failed load. Running through my code i could see that URLPatterns path for the folder was writen okay, but i had forgotten to include the '*from events import views as events_views*'
 - Resolved and issue within the database model where an error was occuring when trying to add a method to the Events model. I had opted to use 'user' to display the author of the post and had mismatched my mode when following along the creation guide. However, I was able to fix the issue by removing 'author' as an option and kept it as the user name for the post creator.
 - The was an issue with migrations due to changes being made that affected a prior migration. To fix this, I was guided by the tutor team to delete the database and create a new one, then do makemigrations and migrate again. This fixed this issue and allowed futher migrations to happen.
+- Later into the development i was met with issues when trying to 
 
 ### Current Bugs:
 - When trying to add a comment form, the body field is not being displayed for logged in users to comment on events with.
