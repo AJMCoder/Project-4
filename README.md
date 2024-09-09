@@ -147,6 +147,13 @@ On the Events page, I would like the users to be able to comment and sign up for
 - The create button on our "Events" page is there for registered users to add events or social activities they are wanting to run as part of the tennis club.
 
 ## Testing
+
+### Manual Testing:
+
+#### Responsiveness
+- The responsiveness of my website was tested through [UI Dev](https://ui.dev/amiresponsive). This image is displayed at the top of the README.md file.
+
+#### 
 ### Validator Testing:
 ...
 
