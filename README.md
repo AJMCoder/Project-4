@@ -4,7 +4,7 @@ CityServe Tennis League offers a delightful blend of friendly, social, and compe
 
 ![Site responsiveness](static/images/readme/responsiveness.png)
 
-The link to the live website can be found [here](https://city-serve-f48d9e79e0a9.herokuapp.com/).
+The link to the live website can be found [here]().
 
 Admin login credentials are as follows: 
 - Username: CityServe
@@ -21,8 +21,7 @@ Admin login credentials are as follows:
     + [New User Goals](#new-user-goals "New User Goals")
 + [User Stories](#user-stories "user-stories")
     + [Admin Stories](#admin-stories "Admin Stories")
-    + [Members Stories](#members-stories "Members Stories")
-    + [Visitor Stories](#visitor-stories "Visitor Stories")
+    + [Site User Stories](#site-user-stories "Site User Stories")
 + [Design](#design "Design")
     + [Typography](#typography "Typography")
     + [Colour Choices](#colour-choices "Colour Choices")
@@ -30,8 +29,6 @@ Admin login credentials are as follows:
     + [Existing Features](#existing-features "Existing Features")
     + [C.R.U.D Operations](#crud-operations "C.R.U.D Operations")
 + [Testing](#testing "Testing")
-    + [Validator Testing](#validator-testing "Validator Testing")
-    + [General Continuous Testing](#general-continuous-testing "General Continuous Testing")
     + [De-Bugging](#de-bugging "De-Bugging")
 + [Technologies Used](#technologies-used "Technologies Used")
     + [Frameworks, Libraries and Programs](#frameworks-libraries-and-programs "Frameworks, Libraries and Programs")
@@ -55,6 +52,10 @@ The target audience is anyone and everyone, tennis is a hugely inclusive sport t
 ### Navigation:
 The navigation throughout the website is simple, due to clear navigation at the top of the website. The Home Page gives the user or visitor information on what we offer as well as testemonials to show people the experiences of others.
 
+<details><summary>Navigation</summary>
+<img src="static/images/readme/navbar.png" >
+</details>
+
 ### Current User Goals:
 Our current goals are for tennis players to have better access to more opportunities to play tennis locally, in an environment they know they can have fun in. It is made by the community, for the community.
 
@@ -63,13 +64,23 @@ As a new visitor to the site, our goal is to show what we offer, and to give rea
 
 ## User Stories
 ### Admin Stories:
-...
 
-### Member Stories:
-...
+- As a site admin I can modify and delete created events so that i can manage my league better.
+- As a site admin I can create draft events so that i can finish completing them at a later date.
+- As a site admin I can create or update the rules page contents so that the users are aware of the current regulations of the club.
+- As a site admin i can approve or disapprove events so that I can ensure that they are relevant or filter out irrelevant or harmful creations.
 
-### Visitor Stories:
-...
+
+### Site User Stories:
+
+- As a site user I can modify and delete events i have created so that so that i can make changes if required or if availability changes.
+- As a site user I can navigate the website so that i can view its contents.
+- As a site user I can register an account so that i can create events.
+- As a site user I can submit match results that i have played in so that i can share my results with other users.
+
+## Agile Methedology
+
+The development of this project was managed and tracked using GitHub Projects Kanban Board: [City Serve - User Stories](https://github.com/users/AJMCoder/projects/1)
 
 ## Design
 ### Typography:
@@ -78,7 +89,12 @@ The fonts for the website are all chosen from the range within the Google Fonts 
 
 ### Colour Choices:
 
-*image of colours used*
+The choice of colours, mainly greeens, all tried to link back to the tennis and the traditional game being played on grass. When experimenting, green seemed to be the best choice of not being too shouty or loud.
+
+<details><summary>Example</summary>
+<img src="static/images/readme/colour-green.png" >
+<img src="static/images/readme/colour-green2.png" >
+</details>
 
 ## Features
 ### Existing Features:
@@ -87,11 +103,15 @@ The fonts for the website are all chosen from the range within the Google Fonts 
 
 Desktop view:
 
-![Desktop Navbar](static/images/readme/nav-bar.png)
+![Desktop Navbar](static/images/readme/navbar.png)
 
 Mobile view:
 
-![Mobile Navbar](static/images/readme/navbar-mobile.png)
+![Mobile Navbar](static/images/readme/mobile-nav.png)
+
+Display User:
+
+![Display User](static/images/readme/user.png)
 
 #### Rules Page:
 
@@ -103,13 +123,25 @@ Mobile view:
 
 #### Event Details:
 
-![Event Details](static/images/readme/event-details.png)
+![Event Details](static/images/readme/event-detail.png)
+
+#### Event edit:
+
+![Edit](static/images/readme/event-edit.png)
+
+#### Matches:
+
+![Matches](static/images/readme/matches.png)
+
+Submit Scores:
+
+![Submit](static/images/readme/match-submit.png)
 
 #### Login Page, Logout and Sign Up Pages:
 
 Login:
 
-![Login Page](static/images/readme/signin.png)
+![Login Page](static/images/readme/sign-in.png)
 
 Logout:
 
@@ -117,48 +149,40 @@ Logout:
 
 Sign Up:
 
-![Sign Up Page](static/images/readme/signup.png)
+![Sign Up Page](static/images/readme/sign-up.png)
 
 #### Footer
 
 ![Footer](static/images/readme/footer.png)
 
-### Future Features: *Basic HTML was created for some of these pages but could not be properly implemented in time for the websites release/submision.*
-
-#### Home Page (Landing Page):
-
-![Landing Page](static/images/readme/landing-page.jpg)
-
-#### Leagues Page:
-
-![Leagues Page](static/images/readme/league-page.png)
-
-#### Contact Page:
-
-![Contact Page](static/images/readme/contact-page.png)
+### Future Features:
 
 #### Comment Form for Events Page:
 
-On the Events page, I would like the users to be able to comment and sign up for events directly once they have interacted with them. Development of the comment form did take place but bugs occured before deployment due to text body field not appearing. A fix was tried but it resulted in users not being able to submit their comments and be stored.
+On the Events page, I would like the users to be able to comment and sign up for events directly once they have interacted with them. Development of the comment form did take place but bugs occured before deployment due to text body field not appearing. A fix was tried but it resulted in users not being able to submit their comments and be stored. For now, the comment box and submit button have been disabled for logged in, and logged out users.
 
-### C.R.U.D Operations:
+Comment Form:
+![Comment form](static/images/readme/comment-form.png)
 
-#### Create:
+## C.R.U.D Operations:
+
+### Create:
 - The create button on our "Events" page is there for registered users to add events or social activities they are wanting to run as part of the tennis club.
+- Users can also input data in the form of match results so that users can see or share their performances.
+
+### Read:
+- Users can read about events either the admins or other users have created.
+- Users can view submitted results to see how other players are performing.
+
+### Update:
+- Users who are logged in can edit any events *they* have posted.
+
+### Delete:
+- Users who are logged in can delete any event *they* have created.
 
 ## Testing
 
-### Manual Testing:
-
-#### Responsiveness
-- The responsiveness of my website was tested through [UI Dev](https://ui.dev/amiresponsive). This image is displayed at the top of the README.md file.
-
-#### 
-### Validator Testing:
-...
-
-### General Continuous Testing:
-...
+For detailed information on testing, please refer to the [Testing Documentation](TESTING.md).
 
 ### De-Bugging:
 - When creating a modal for the Login button, now popup was being shown. Re-reading the code line by line of the modal and the Login section made me realise that the data-bs-target was not correctly aligned with what it was trying to pull from and was resulting in no popup. Renaming it to match the modal code section finally allowed the modal to appear. 
@@ -172,8 +196,6 @@ On the Events page, I would like the users to be able to comment and sign up for
 
 ### Current Bugs:
 - When trying to add a comment form, the body field is not being displayed for logged in users to comment on events with.
-- Navbar links don't correctly navigate users to the associated pages.
-- Contact form is no longer synced to the website. It needs to be reconnected once a new page is created for it.
 
 ## Technologies Used
 ### Frameworks, Libraries and Programs
@@ -183,6 +205,7 @@ On the Events page, I would like the users to be able to comment and sign up for
 - Font Awesome
 - Visual Studio Code
 - Gitpod
+- Google Fonts
 
 ### Languages
 

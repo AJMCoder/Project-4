@@ -215,7 +215,7 @@ Django's automated testing is useful because it ensures the reliability and stab
 
 Overall, these tests ensure that event creation, editing, deletion, listing, and detail view functionality work as expected.
 
-### Conact form testing
+### Contact form testing
 
 #### These tests in the ContactFormTest class validate the functionality of the ContactForm:
 
@@ -241,59 +241,102 @@ Overall, these tests ensure that the contact form behaves correctly, validating 
 
 ### HTML files
 
-The HTML files pass  through the ![W3C validator]()
+The HTML files pass  through the [W3C validator](https://validator.w3.org/nu/) with no issues. Some warnings for an attribute to do with a bad value but this was checked and does not seem to match the error so was ignored. 
 
 <details><summary>Home</summary>
-<img src="" >
+<img src="static/images/readme/testing/validator/home-html.png" >
 </details>
 
 <details><summary>Events</summary>
-<img src="" >
+<img src="static/images/readme/testing/validator/events-html.png" >
 </details>
 
 <details><summary>Event detail</summary>
-<img src="" >
+<img src="static/images/readme/testing/validator/event-detail-html.png" >
 </details>
 
 <details><summary>Event create</summary>
-<img src="" >
+<img src="static/images/readme/testing/validator/event-create.png" >
 </details>
 
 <details><summary>Matches</summary>
-<img src="" >
+<img src="static/images/readme/testing/validator/matches-html.png" >
 </details>
 
 <details><summary>Submit Matches</summary>
-<img src="" >
+<img src="static/images/readme/testing/validator/submit-html.png" >
 </details>
 
 <details><summary>Rules</summary>
-<img src="" >
+<img src="static/images/readme/testing/validator/rules-html.png" >
 </details>
 
 <details><summary>Contact</summary>
-<img src="" >
+<img src="static/images/readme/testing/validator/contact-html.png" >
 </details>
 
 <details><summary>Sign In</summary>
-<img src="" >
+<img src="static/images/readme/testing/validator/login-html.png" >
 </details>
 
 <details><summary>Registration</summary>
-<img src="" >
+<img src="static/images/readme/testing/validator/registration-html.png" >
 </details>
 
 <details><summary>Sign Out</summary>
-<img src="" >
+<img src="static/images/readme/testing/validator/signout-html.png" >
 </details>
 
 
+### CSS file
+
+The CSS file passes through the [Jigsaw validator](https://jigsaw.w3.org/css-validator/) with no issues found.
+
+<details><summary>CSS</summary>
+<img src="static/images/readme/testing/validator/css.png" >
+</details>
+
+### JavaScript file
+
+The JavaScript file passes through the [JSHint validator](https://jshint.com/) with no issues found.
+
+<details><summary>JavaScript</summary>
+<img src="static/images/readme/testing/validator/js.png" >
+</details>
 
 
+## Accessibility
 
+The app has an excellent Accessibility rating in Lighthouse:
 
+<details><summary>Home page</summary>
+<img src="static/images/readme/testing/accessibility/home.png" >
+</details>
 
+<details><summary>Events</summary>
+<img src="static/images/readme/testing/accessibility/events.png" >
+</details>
 
-<details><summary>#</summary>
-<img src="" >
+<details><summary>Event details</summary>
+<img src="static/images/readme/testing/accessibility/create.png" >
+</details>
+
+<details><summary>Matches</summary>
+<img src="static/images/readme/testing/accessibility/matches.png" >
+</details>
+
+<details><summary>Rules</summary>
+<img src="static/images/readme/testing/accessibility/rules.png" >
+</details>
+
+<details><summary>Registration</summary>
+<img src="static/images/readme/testing/accessibility/registration.png" >
+</details>
+
+<details><summary>Sign in</summary>
+<img src="static/images/readme/testing/accessibility/login.png" >
+</details>
+
+<details><summary>Sign out</summary>
+<img src="static/images/readme/testing/accessibility/logout.png" >
 </details>
