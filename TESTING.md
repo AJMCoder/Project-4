@@ -12,6 +12,46 @@ When user is not logged in, the navigation bar looks like this:
 <img src="" >
 </details>
 
+<details><summary>#</summary>
+<img src="" >
+</details>
+
+<details><summary>#</summary>
+<img src="" >
+</details>
+
+<details><summary>#</summary>
+<img src="" >
+</details>
+
+<details><summary>#</summary>
+<img src="" >
+</details>
+
+<details><summary>#</summary>
+<img src="" >
+</details>
+
+<details><summary>#</summary>
+<img src="" >
+</details>
+
+<details><summary>#</summary>
+<img src="" >
+</details>
+
+<details><summary>#</summary>
+<img src="" >
+</details>
+
+<details><summary>#</summary>
+<img src="" >
+</details>
+
+<details><summary>#</summary>
+<img src="" >
+</details>
+
 
 
 ### When user is *Logged in*

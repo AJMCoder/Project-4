@@ -67,25 +67,25 @@ a {
 /*--------------------------------Content Styling*/
 .join-container {
     font-family: "Klee One", sans-serif;
-    background-color: antiquewhite;
+    background-color: rgb(193, 247, 231);
     font-size: calc(10px + 0.5vw);
 }
 
 .community-container {
     font-family: "Klee One", sans-serif;
-    background-color: lightblue;
+    background-color: rgb(166, 226, 208);
     font-size: calc(10px + 0.5vw);
 }
 
 .testimonials-container {
     font-family: "Klee One", sans-serif;
-    background-color: lightgreen;
+    background-color: rgb(107, 185, 162);
     font-size: calc(10px + 0.5vw);
 }
 
 .about-container {
     font-family: "Klee One", sans-serif;
-    background-color: lightcoral;
+    background-color: rgb(82, 158, 135);
     font-size: calc(10px + 0.5vw);
 }
 
