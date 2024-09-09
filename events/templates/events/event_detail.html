@@ -67,17 +67,15 @@
         </div>
         </div>
         <div class="col-md-4 card mb-4 mt-3 flex-shrink-1">
-            <div class="card-body">
+            <div class="card-body text-center text-secondary">
                 {% if user.is_authenticated %}
-                <h3>Leave a comment:</h3>
-                <p>Commenting as: {{ user.username }}</p>
+                <h3>Comment feature currently disabled</h3>
                 <form id="commentForm" method="post"></form>
                     {% csrf_token %}
                     {{ comment_form|crispy }}
-                    <button id="submitButton" type="submit" class="btn btn-success form-btn">Send</button>
                 </form>
                 {% else %}
-                <p>Log in to leave a comment</p>
+                <p>Comment feature currently disabled</p>
                 {% endif %}
             </div>
         </div>
